@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Local MCP - File Editor</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div id="app">
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <h2>Files</h2>
+      <button id="refreshBtn">Refresh</button>
+    </div>
+    <div id="drives"></div>
+    <div id="tree"></div>
+  </aside>
+
+  <main id="main">
+    <div id="editorHeader">
+      <input id="pathInput" placeholder="Path" />
+      <button id="saveBtn">Save</button>
+      <button id="createBtn">Create File</button>
+      <button id="mkdirBtn">Create Folder</button>
+      <button id="deleteBtn">Delete</button>
+      <button id="downloadBtn">Download</button>
+    </div>
+    <textarea id="editor" spellcheck="false"></textarea>
+
+    <div id="promptBar">
+      <input id="promptInput" placeholder="Type instruction: e.g. create file C:/temp/hello.txt with content: print('hi')" />
+      <button id="promptRun">Run Prompt</button>
+      <div id="promptStatus"></div>
+    </div>
+  </main>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
